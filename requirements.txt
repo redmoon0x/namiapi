@@ -1,0 +1,6 @@
+fastapi
+pydantic
+aiohttp
+beautifulsoup4
+python-dotenv
+uvicorn
