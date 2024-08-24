@@ -69,6 +69,9 @@ async def search(request: SearchRequest):
         global_results=[SearchResult(title=title, url=url) for title, url in global_results],
         archive_results=[SearchResult(title=title, url=url) for title, url in archive_results]
     )
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the PDF Search API!"}
 
 if __name__ == "__main__":
     import uvicorn
