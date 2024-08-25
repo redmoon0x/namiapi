@@ -69,6 +69,10 @@ async def search(request: SearchRequest):
         global_results=[SearchResult(title=title, url=url) for title, url in global_results],
         archive_results=[SearchResult(title=title, url=url) for title, url in archive_results]
     )
+@app.get("/ping")
+async def ping():
+    return {"status": "ok", "message": "Service is running"}
+    
 @app.get("/")
 async def root():
     return {"message": "Welcome to the PDF Search API!"}
