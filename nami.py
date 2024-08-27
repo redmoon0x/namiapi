@@ -8,6 +8,7 @@ import random
 from typing import List, Tuple
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 app = FastAPI()
